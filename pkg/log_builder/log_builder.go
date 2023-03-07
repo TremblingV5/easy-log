@@ -7,6 +7,8 @@ import (
 	"sort"
 )
 
+// InitLogBuilder
+// Init log builder with log type and initial message
 func InitLogBuilder(logType log_type.LogType, message string) *LogInfoBuilder {
 	return &LogInfoBuilder{
 		logType: logType,
@@ -23,6 +25,8 @@ func (b *LogInfoBuilder) SetMessage(str string) {
 	b.message = str
 }
 
+// Collect
+// Save log info to log builder by key-value pairs
 func (b *LogInfoBuilder) Collect(key string, value string) {
 	tempKey := key
 
